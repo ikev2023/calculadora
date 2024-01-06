@@ -16,6 +16,6 @@ function sumar()
     else 
     {
         // Manejar el caso en que los valores no sean números
-        document.querySelector('.resul').innerText = 'Ingrese números válidos';
+        document.querySelector('.resul').innerText = 'Ingrese números válidos SUBNORMAL';
     }
 }
