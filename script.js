@@ -1,21 +1,29 @@
-function sumar() 
-{
-    // Obtener los valores ingresados
-    var num1 = parseFloat(document.querySelector('.num1').value);
-    var num2 = parseFloat(document.querySelector('.num2').value);
-
-    // Verificar si los valores son números
-    if (!isNaN(num1) && !isNaN(num2)) // la funcion isNan sirve para detectar si es un string
+function cambiar() {
+    const meses = ["...", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    const indice = document.getElementById("lista").selectedIndex;
+    const invierno = [12, 1, 2];
+    const primavera = [3, 4, 5];
+    const verano = [6, 7, 8];
+    const otoño = [9, 10, 11];
+    if (indice >= 0 && indice < meses.length) {
+        document.getElementById("res").innerText = meses[indice];
+    } else {
+        alert("Seleccione una opción");
+    }
+    if (invierno.includes(indice)) {
+        document.getElementById("esta").innerText = "En ese mes hay invierno";
+    }
+    else if (primavera.includes(indice)) {
+        document.getElementById("esta").innerText = "En ese mes hay primavera";
+    }
+    else if (verano.includes(indice)) {
+        document.getElementById("esta").innerText = "En ese mes hay verano";
+    }
+    else if (otoño.includes(indice)) {
+        document.getElementById("esta").innerText = "En ese mes hay otoño";
+    }
+    else
     {
-        // Realizar la operación de suma
-        var resultado = num1 + num2;
-
-        // Mostrar el resultado en el elemento HTML
-        document.querySelector('.resul').innerText = resultado;
-    } 
-    else 
-    {
-        // Manejar el caso en que los valores no sean números
-        document.querySelector('.resul').innerText = 'Ingrese números válidos SUBNORMAL';
+        document.getElementById("esta").innerText = "...";
     }
 }

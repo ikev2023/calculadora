@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <title>Calculadora</title>
+    <title>Mes</title>
 </head>
+
 <body>
-<h1>Calculadora epica :D OMG AMIEZING</h1>
-<div>
-    <input type="text" placeholder="Número 1" class="num1">
-</div>
-<div>
-    <input type="text" placeholder="Número 2" class="num2">
-</div>
-<div>
-    <button onclick="sumar()">sumar</button>
-    <h1>RESULTADO: </h1>
-</div>
-<div>
-    <h1 class="resul">¿?</h1>
-</div>
+    <div class="container-lg">
+        <h1 class="titulo text-center">Listas en js by kevin</h1>
+        <h2 class="text-center p-2">Selecione una opcion</h2>
+        <div class="container-fluid d-flex align-items-center justify-content-center">
+            <select id="lista" onchange="cambiar()">
+                <option value="">Seleccione un mes</option>
+                <option value="0">Enero</option>
+                <option value="1">Febrero</option>
+                <option value="2">Marzo</option>
+                <option value="3">Abril</option>
+                <option value="4">Mayo</option>
+                <option value="5">Junio</option>
+                <option value="6">Julio</option>
+                <option value="7">Agosto</option>
+                <option value="8">Septiembre</option>
+                <option value="9">Octubre</option>
+                <option value="10">Noviembre</option>
+                <option value="11">Diciembre</option>
+            </select>
+        </div>
+        <h1 id="res" class="titulo text-center p-5">...</h1>
+        <h1 id="esta" class="titulo text-center p-5">...</h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
